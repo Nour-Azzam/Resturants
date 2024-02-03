@@ -8,6 +8,7 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { HeaderModule } from './header/header.module';
 import { AdsSectionModule } from './ads-section/ads-section.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FeaturedestaurantsModule } from './featured-restaurants/featured-restaurants.module';
 
 @NgModule({
   declarations: [AppComponent, HeroSectionComponent],
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientXsrfModule.withOptions({}),
     HeaderModule,
     AdsSectionModule,
+    FeaturedestaurantsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

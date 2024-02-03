@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-header>
+    <div class="featured-title">Featured</div>
+  </mat-card-header>
+  <mat-card-content class="featured-container">
+    <div class="featured-list">
+      <div *ngFor="let feaurted of featuredList" class="featured-item">
+        <img src="{{ feaurted.image[0].url }}" alt="" class="feature" />
+        <div class="overlay-text">{{ feaurted.name }}</div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
