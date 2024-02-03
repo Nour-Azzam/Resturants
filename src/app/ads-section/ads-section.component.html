@@ -1,0 +1,12 @@
+<mat-card class="ads-card">
+  <mat-card-header>
+    <div class="ads-title">Discover what's new</div>
+  </mat-card-header>
+  <mat-card-content class="photos-container">
+    <div class="photo-list">
+      <div *ngFor="let photo of photosList">
+        <img src="{{ photo.photoURL }}" class="photo" alt="" />
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

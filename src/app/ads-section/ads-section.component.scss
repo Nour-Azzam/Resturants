@@ -1,0 +1,17 @@
+.ads-title {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 3rem;
+}
+
+.photo-list {
+  display: flex;
+  gap: 0.7rem;
+  overflow-x: auto;
+}
+
+.photo {
+  height: 30rem;
+}
