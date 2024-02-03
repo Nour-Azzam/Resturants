@@ -1,0 +1,15 @@
+.hero-container {
+  width: 100vw;
+  height: 60vh;
+  background-image: url("../../assets/Group\ 86342.svg");
+  background-size: cover;
+  // background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title {
+  color: white;
+  text-align: center;
+}

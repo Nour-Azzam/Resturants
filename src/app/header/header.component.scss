@@ -1,0 +1,27 @@
+.sticky-header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(to bottom, #201a2d, #201a2d7c, #201a2d00);
+  padding: 10px 20px;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  height: 4rem;
+  text-align: center;
+  align-items: center;
+}
+
+.header-section {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+a {
+  font-size: 0.8rem;
+  color: white;
+  text-decoration: none;
+}
