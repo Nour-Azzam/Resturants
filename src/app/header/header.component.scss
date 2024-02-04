@@ -1,8 +1,8 @@
 .sticky-header {
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 9999;
   background: linear-gradient(to bottom, #201a2d, #201a2d7c, #201a2d00);
   padding: 10px 20px;
   padding-bottom: 1rem;
