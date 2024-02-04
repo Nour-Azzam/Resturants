@@ -7,14 +7,17 @@
   </mat-card-header>
   <mat-card-content>
     <div class="search-bar-container">
-      <mat-form-field>
-        <mat-icon matPrefix>search</mat-icon>
-        <input
-          type="text"
-          matInput
-          placeholder="Search restaurant or cuisine"
-        />
-      </mat-form-field>
+      <form [formGroup]="searchRestaurantForm">
+        <mat-form-field>
+          <mat-icon matPrefix>search</mat-icon>
+          <input
+            type="text"
+            matInput
+            placeholder="Search restaurant or cuisine"
+            formControlName="restauantName"
+          />
+        </mat-form-field>
+      </form>
       <mat-form-field>
         <input matInput placeholder="Search location" />
         <mat-icon matSuffix>my_location</mat-icon>
@@ -38,11 +41,18 @@
         >
       </mat-chip-list>
     </div>
+    <br />
     <div class="restaurant-cards-container">
+      <mat-progress-spinner
+        mode="indeterminate"
+        color="accent"
+        *ngIf="isloading"
+      ></mat-progress-spinner>
       <mat-card *ngFor="let restaurant of restaurantsList" style="width: 12rem">
         <img
+        *ngIf="restaurant.logo"
           class="restaurant-logo"
-          src="{{ restaurant.logo.formats.thumbnail?.url }}"
+          src="{{ restaurant.logo.formats.thumbnail.url || ''}}"
           alt="{{ restaurant.name }}"
         />
         <div class="restaurant-desc">

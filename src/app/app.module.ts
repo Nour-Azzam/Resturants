@@ -10,9 +10,10 @@ import { AdsSectionModule } from './ads-section/ads-section.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FeaturedestaurantsModule } from './featured-restaurants/featured-restaurants.module';
 import { ExploreRestaurantsSectionModule } from './explore-restaurants-section/explore-restaurants-section.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, HeroSectionComponent],
+  declarations: [AppComponent, HeroSectionComponent, FooterComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
