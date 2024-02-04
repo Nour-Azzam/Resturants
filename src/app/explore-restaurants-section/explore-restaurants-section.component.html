@@ -1,0 +1,76 @@
+<mat-card>
+  <mat-card-header class="explore-header">
+    <div class="explore-title">Explore Restaurants</div>
+    <div class="explore-sub-title">
+      Here's our fine restaurants collection, Enjoy!
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="search-bar-container">
+      <mat-form-field>
+        <mat-icon matPrefix>search</mat-icon>
+        <input
+          type="text"
+          matInput
+          placeholder="Search restaurant or cuisine"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Search location" />
+        <mat-icon matSuffix>my_location</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="filter-title">Cuisine Categories</div>
+    <div class="cuisine-type-chips">
+      <mat-chip-list aria-label="cuisine selection" selectable>
+        <mat-chip
+          color="accent"
+          [selected]="cuisineFilter == 0"
+          (click)="filterCuisine(0)"
+          >Show all, I'm flexible</mat-chip
+        >
+        <mat-chip
+          color="accent"
+          *ngFor="let cuisine of cusisineTypeList"
+          [selected]="cuisineFilter == cuisine.id"
+          (click)="filterCuisine(cuisine.id)"
+          >{{ cuisine.name }}</mat-chip
+        >
+      </mat-chip-list>
+    </div>
+    <div class="restaurant-cards-container">
+      <mat-card *ngFor="let restaurant of restaurantsList" style="width: 12rem">
+        <img
+          class="restaurant-logo"
+          src="{{ restaurant.logo.formats.thumbnail?.url }}"
+          alt="{{ restaurant.name }}"
+        />
+        <div class="restaurant-desc">
+          <div style="width: 65%">
+            <div class="restaurant-name">{{ restaurant.name }}</div>
+            <div class="restaurant-address">{{ restaurant.address }}</div>
+          </div>
+          <div
+            class="restaurant-state"
+            style="width: 30%; display: flex; align-items: center; gap: 0.2rem"
+          >
+            <div
+              *ngIf="restaurant.online; else offline"
+              style="font-size: 0.7rem"
+            >
+              Online
+            </div>
+            <ng-template #offline>
+              <div style="font-size: 0.7rem; color: #c3c3c3">
+                Offline
+              </div></ng-template
+            >
+            <div
+              [ngClass]="restaurant.online ? 'online-icon' : 'offline-icon'"
+            ></div>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </mat-card-content>
+</mat-card>

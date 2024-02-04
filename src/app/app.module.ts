@@ -9,6 +9,7 @@ import { HeaderModule } from './header/header.module';
 import { AdsSectionModule } from './ads-section/ads-section.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FeaturedestaurantsModule } from './featured-restaurants/featured-restaurants.module';
+import { ExploreRestaurantsSectionModule } from './explore-restaurants-section/explore-restaurants-section.module';
 
 @NgModule({
   declarations: [AppComponent, HeroSectionComponent],
@@ -21,6 +22,7 @@ import { FeaturedestaurantsModule } from './featured-restaurants/featured-restau
     HeaderModule,
     AdsSectionModule,
     FeaturedestaurantsModule,
+    ExploreRestaurantsSectionModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
